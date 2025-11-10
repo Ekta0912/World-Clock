@@ -3,6 +3,7 @@
 A simple and elegant **World Clock Website** built using **HTML, CSS, JavaScript, and Bootstrap**.
 
 ---
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)](https://ekta0912.github.io/World-Clock/)
 
 ## ✨ Features
 - 🕐 Real-time clocks for multiple countries (India, USA, Japan)
