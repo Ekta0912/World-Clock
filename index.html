@@ -127,7 +127,7 @@
       <h3 id="localTime" class="my-3"></h3>
       <p class="lead">Explore live time zones around the world 🌍</p>
       <hr class="my-4">
-      <p>Compare times from India, USA, and Japan below.</p>
+      <p>Compare times from India, USA, Japan, London, Canada, and Australia below.</p>
     </div>
   </div>
 
@@ -135,6 +135,8 @@
   <div class="container my-5">
     <h2 class="text-center mb-4">Live World Clocks</h2>
     <div class="row text-center">
+
+      <!-- India -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
           <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" class="card-img-top" alt="India">
@@ -145,6 +147,7 @@
         </div>
       </div>
 
+      <!-- USA -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
           <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" class="card-img-top"
@@ -156,6 +159,7 @@
         </div>
       </div>
 
+      <!-- Japan -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm">
           <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" class="card-img-top" alt="Japan">
@@ -165,6 +169,43 @@
           </div>
         </div>
       </div>
+
+      <!-- London -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" class="card-img-top"
+            alt="UK">
+          <div class="card-body">
+            <h5 class="card-title">London (GMT)</h5>
+            <h6 id="timeLondon"></h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canada -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" class="card-img-top"
+            alt="Canada">
+          <div class="card-body">
+            <h5 class="card-title">Canada (Toronto)</h5>
+            <h6 id="timeCanada"></h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Australia -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" class="card-img-top"
+            alt="Australia">
+          <div class="card-body">
+            <h5 class="card-title">Australia (Sydney)</h5>
+            <h6 id="timeAustralia"></h6>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -175,7 +216,7 @@
       <div class="col-md-4">
         <i class="fas fa-globe fa-3x mb-3"></i>
         <h5>Global Times</h5>
-        <p>Track any country’s time easily.</p>
+        <p>Track multiple countries’ time easily.</p>
       </div>
       <div class="col-md-4">
         <i class="fas fa-clock fa-3x mb-3"></i>
@@ -204,7 +245,7 @@
     crossorigin="anonymous"></script>
 
   <script>
-    // Update live clocks
+    // Live clocks
     function updateClocks() {
       const now = new Date();
 
@@ -219,6 +260,15 @@
 
       document.getElementById('timeJapan').innerHTML =
         new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      document.getElementById('timeLondon').innerHTML =
+        new Date().toLocaleString('en-US', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      document.getElementById('timeCanada').innerHTML =
+        new Date().toLocaleString('en-US', { timeZone: 'America/Toronto', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      document.getElementById('timeAustralia').innerHTML =
+        new Date().toLocaleString('en-US', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     }
     setInterval(updateClocks, 1000);
     updateClocks();
@@ -231,5 +281,5 @@
   </script>
 
 </body>
-</html>
 
+</html>
